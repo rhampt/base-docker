@@ -4,10 +4,12 @@ WORKDIR /app
 
 COPY start.sh ./
 
+RUN chmod +x start.sh
+
 RUN install_packages apt-utils wget
 
 # Next line will be the CMD when using local mode
 # dev-cmd-live=balena-idle
 
 # Next line will be the CMD in "production" (not in local mode)
-CMD [ "/bin/bash", "/app/start.sh"]
+CMD [ "/bin/bash", "start.sh"]
