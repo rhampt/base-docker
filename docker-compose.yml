@@ -1,0 +1,7 @@
+version: "2.1"
+services:
+  project:
+    build: ./project
+    ports:
+      - "80:80"
+      
